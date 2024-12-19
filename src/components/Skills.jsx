@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Box, Grid } from '@mui/material';
 
-const skills = ['Python', 'SQL', 'React', 'Node.js', 'Power BI', 'Google Data Studio', 'QlikSense', 'Excel'];
+const skills = ['Python', 'Django', 'React', 'AWS', 'SQL', 'JavaScript', 'Web development', 'Content Creation', ];
 
 export default function Skills() {
   return (

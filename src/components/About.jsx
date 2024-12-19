@@ -56,6 +56,10 @@ export default function About() {
             color: '#555',
           }}
         >
+          A 2024 graduate and passionate Software Engineer actively seeking opportunities to grow 
+          and contribute in the tech industry. I have hands-on experience in React-based development, 
+          including deploying scalable Django applications on AWS. 
+          Beyond coding, I love creating content on LinkedIn, sharing insights on tech and career growth. 
           I’m a 22-year-old software engineer passionate about data-driven
           solutions and entrepreneurship. My goal is to make an impact in
           technology and community development. With a strong foundation in
@@ -63,7 +67,7 @@ export default function About() {
           constantly exploring new opportunities to grow and innovate.
         </Typography>
 
-        {/* Buttons */}
+        {/* Buttons
         <Box sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <Button
             variant="contained"
@@ -93,7 +97,7 @@ export default function About() {
           >
             Download CV
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

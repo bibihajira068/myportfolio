@@ -4,51 +4,51 @@ import { Typography, Box, Grid, Card, CardContent } from '@mui/material';
 const internships = [
   {
     title: 'AWS Deployment Intern',
-    company: 'Propleads',
-    duration: 'May 2024 - July 2024',
+    company: 'Shuzan Technology',
+    duration: 'June 2023 - March 2024',
     description: 'Managed AWS EC2 and RDS setup for Django application deployment, resolving database failures and improving scalability.',
   },
   {
-    title: 'Data Analyst Intern',
-    company: 'TechCorp',
-    duration: 'Jan 2024 - Mar 2024',
-    description: 'Developed dashboards using Power BI and analyzed customer data to enhance retention strategies.',
+    title: 'Data Science with AI/ML Intern',
+    company: 'Cranes Varsity',
+    duration: 'Aug 2023 - Sept 2023',
+    description: 'Learnt about different process in Data analysis along with LLMs and NLP Using Python as my core language.',
   },
   {
-    title: 'Frontend Developer Intern',
-    company: 'WebWorks',
-    duration: 'Aug 2023 - Dec 2023',
-    description: 'Built responsive web pages using React and improved website performance by 30%.',
+    title: 'FullStack Developer Intern',
+    company: 'Shuzan Technology',
+    duration: 'Nov 2023 - March 2024',
+    description: 'Built responsive web pages using React and improved website performance by 30%, Also worked on live projects .',
   },
   {
-    title: 'Backend Developer Intern',
-    company: 'CodeBase',
-    duration: 'Jun 2023 - Aug 2023',
-    description: 'Created RESTful APIs with Node.js and Express, integrating third-party authentication systems.',
+    title: 'Human Resources Intern',
+    company: 'PHN Technologies',
+    duration: 'April 2023 - June 2023',
+    description: 'Maintained & Managed Payroll Systems.',
   },
   {
-    title: 'Digital Marketing Intern',
-    company: 'MarketMasters',
-    duration: 'Jan 2023 - Apr 2023',
-    description: 'Optimized digital campaigns and increased website traffic by 20% through targeted SEO strategies.',
+    title: 'Python Intern',
+    company: 'Sync Interns',
+    duration: 'Apr 2023 - May 2023',
+    description: 'Created Optimized solution for Python.',
   },
   {
-    title: 'AI Workshop Participant',
-    company: 'Growth School',
-    duration: 'Nov 2023',
-    description: 'Gained insights into AI advancements and their application in business processes.',
+    title: 'Web development Intern',
+    company: 'Project Planners Corp',
+    duration: 'April 2023 - May 2023',
+    description: 'Created Dummy Websites.',
   },
   {
-    title: 'Full Stack Developer Intern',
-    company: 'DevStart',
-    duration: 'Sep 2022 - Dec 2022',
-    description: 'Developed a full-stack e-commerce platform using MERN stack, reducing page load time by 40%.',
+    title: 'Web Developer & Designing Intern',
+    company: 'Oasis Infobyte',
+    duration: 'Sept 2023 - Oct 2022',
+    description: 'Developed a full-stack e-commerce platform using HTML, CSS, JS.',
   },
   {
-    title: 'Database Administrator Intern',
-    company: 'DataHive',
-    duration: 'May 2022 - Jul 2022',
-    description: 'Managed database optimization, resulting in 25% faster query execution.',
+    title: 'Web Development Intern',
+    company: 'Code Alpha',
+    duration: 'May 2023 - May 2023',
+    description: 'Developed a full-stack e-commerce platform using HTML, CSS, JS.',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Experience() {
     <Box
       id="experience"
       sx={{
-        height: '140vh', // Full viewport height
+        height: '170vh', // Full viewport height
         padding: '2rem',
         backgroundColor: '#f7f3e9', // Background for mocha mousse theme
       }}

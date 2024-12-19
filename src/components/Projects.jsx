@@ -1,116 +1,142 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, CardMedia, Button } from '@mui/material';
-import Slider from 'react-slick';
+import { Box, Typography, Card, CardContent, CardMedia, Button, Grid } from '@mui/material';
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'Developed a MERN stack e-commerce platform with integrated payment gateway.',
-    image: '/ecommerce.jpg',
-    link: '#',
+    title: 'Bridge & Boat height Monitoring System',
+    description: ' I worked on in Final Year of Engineering bought us the KSCST Recognition.',
+    image: '/iot.jpg',
+    link: 'https://www.linkedin.com/posts/hajira722_teamwork-projectmanagement-iot-activity-7242948330148749312-8J6b?utm_source=share&utm_medium=member_desktop',
   },
   {
     title: 'AWS Deployment Project',
     description: 'Deployed Django applications using AWS EC2 and RDS, optimizing cloud resources.',
     image: '/aws.jpg',
-    link: '#',
+    link: 'https://www.linkedin.com/posts/hajira722_aws-cloudcomputing-infrastructuremanagement-activity-7267574741673140224-gTma?utm_source=share&utm_medium=member_desktop',
   },
   {
-    title: 'Data Visualization Dashboard',
-    description: 'Created interactive dashboards using Power BI to visualize customer data.',
-    image: '/dashboard.jpg',
-    link: '#',
+    title: 'Meals Delivery App',
+    description: 'In this project I performed CRUD Operations Using DRF I worked on models like Order, OrderItems, Reviews.',
+    image: '/meals.jpg',
+    link: 'https://www.linkedin.com/posts/hajira722_opentowork-django-restframework-activity-7243312445132308480-RRwB?utm_source=share&utm_medium=member_desktop',
   },
   {
     title: 'Portfolio Website',
     description: 'Designed and developed a personal portfolio using React and Material-UI.',
-    image: '/portfolio.jpg',
-    link: '#',
+    image: '/portfolio.png',
+    link: '',
+  },
+  {
+    title: 'Y-Plan',
+    description: 'The Django Rest Framework based project was deployed on EC2 The media and course videos were deployed on S3.',
+    image: '/y-plan.jpg',
+    link: 'https://www.linkedin.com/posts/hajira722_opentowork-aws-ec2-activity-7242497727266185217-3Wf5?utm_source=share&utm_medium=member_desktop',
+  },
+  {
+    title: 'OmniSync Platform',
+    description: 'Developed a dashboard to track and analyze Amazon MCF orders.',
+    image: '/omnisync.png',
+    link: 'https://drive.google.com/file/d/1qPjd7Vfgzhiw1kU9bYFpFhEEmmTCP2-f/view?usp=drive_link',
   },
 ];
 
 export default function Projects() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
   return (
     <Box
       id="projects"
       sx={{
-        height: '100vh',
-        padding: '2rem',
         backgroundColor: '#f7f3e9',
+        padding: '4rem 2rem',
+        textAlign: 'center',
       }}
     >
-      {/* Heading */}
+      {/* Section Title */}
       <Typography
         variant="h4"
-        gutterBottom
-        sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '2rem' }}
+        sx={{
+          fontWeight: 'bold',
+          marginBottom: '2rem',
+          color: '#333',
+        }}
       >
         My Projects
       </Typography>
 
-      {/* Carousel */}
-      <Slider {...settings}>
+      {/* Projects Grid */}
+      <Grid
+        container
+        spacing={4}
+        sx={{
+          justifyContent: 'center',
+        }}
+      >
         {projects.map((project, index) => (
-          <Card
+          <Grid
+            item
             key={index}
+            xs={12}
+            sm={6}
+            md={4}
             sx={{
               display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center',
-              padding: '1rem',
-              margin: '0 auto',
-              maxWidth: 500,
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
-              borderRadius: '12px',
-              backgroundColor: '#ffffff',
+              justifyContent: 'center',
             }}
           >
-            {/* Project Image */}
-            <CardMedia
-              component="img"
-              image={project.image}
-              alt={project.title}
+            <Card
               sx={{
-                height: 200,
-                width: '100%',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                marginBottom: '1rem',
+                maxWidth: 345,
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+                borderRadius: '12px',
+                backgroundColor: '#fff',
               }}
-            />
-
-            {/* Project Content */}
-            <CardContent>
-              <Typography variant="h5" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
-                {project.title}
-              </Typography>
-              <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
-                {project.description}
-              </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-              </Button>
-            </CardContent>
-          </Card>
+            >
+              {/* Project Image */}
+              <CardMedia
+                component="img"
+                alt={project.title}
+                height="180"
+                image={project.image}
+                sx={{
+                  objectFit: 'cover',
+                }}
+              />
+              {/* Project Content */}
+              <CardContent>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 'bold',
+                    marginBottom: '0.5rem',
+                  }}
+                >
+                  {project.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    marginBottom: '1rem',
+                    color: '#666',
+                  }}
+                >
+                  {project.description}
+                </Typography>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    textTransform: 'none',
+                  }}
+                >
+                  View Project
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid>
         ))}
-      </Slider>
+      </Grid>
     </Box>
   );
 }
