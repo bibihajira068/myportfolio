@@ -24,7 +24,7 @@ const projects = [
     title: 'Portfolio Website',
     description: 'Designed and developed a personal portfolio using React and Material-UI.',
     image: '/portfolio.png',
-    link: '',
+    link: 'https://bibihajira.netlify.app/',
   },
   {
     title: 'Y-Plan',
@@ -40,103 +40,106 @@ const projects = [
   },
 ];
 
-export default function Projects() {
-  return (
-    <Box
-      id="projects"
-      sx={{
-        backgroundColor: '#f7f3e9',
-        padding: '4rem 2rem',
-        textAlign: 'center',
-      }}
-    >
-      {/* Section Title */}
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: 'bold',
-          marginBottom: '2rem',
-          color: '#333',
-        }}
-      >
-        My Projects
-      </Typography>
 
-      {/* Projects Grid */}
+export default function Projects() {
+return (
+<Box
+  id="projects"
+  sx={{
+    backgroundColor: '#f7f3e9', // Mocha mousse theme
+    padding: { xs: '2rem 1rem', md: '4rem 2rem' },
+    textAlign: 'center',
+  }}
+>
+  {/* Section Title */}
+  <Typography
+    variant="h4"
+    sx={{
+      fontWeight: 'bold',
+      marginBottom: { xs: '1.5rem', md: '2.5rem' },
+      color: '#333',
+    }}
+  >
+    My Projects
+  </Typography>
+
+  {/* Projects Grid */}
+  <Grid container spacing={4} justifyContent="center">
+    {projects.map((project, index) => (
       <Grid
-        container
-        spacing={4}
+        item
+        key={index}
+        xs={12}
+        sm={6}
+        md={4}
         sx={{
+          display: 'flex',
           justifyContent: 'center',
         }}
       >
-        {projects.map((project, index) => (
-          <Grid
-            item
-            key={index}
-            xs={12}
-            sm={6}
-            md={4}
+        <Card
+          sx={{
+            maxWidth: 345,
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+            borderRadius: '12px',
+            backgroundColor: '#fff',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
+            },
+          }}
+        >
+          {/* Project Image */}
+          <CardMedia
+            component="img"
+            alt={project.title}
+            height="180"
+            image={project.image}
             sx={{
-              display: 'flex',
-              justifyContent: 'center',
+              objectFit: 'cover',
             }}
-          >
-            <Card
+          />
+          {/* Project Content */}
+          <CardContent>
+            <Typography
+              variant="h6"
               sx={{
-                maxWidth: 345,
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
-                borderRadius: '12px',
-                backgroundColor: '#fff',
+                fontWeight: 'bold',
+                marginBottom: '0.5rem',
               }}
             >
-              {/* Project Image */}
-              <CardMedia
-                component="img"
-                alt={project.title}
-                height="180"
-                image={project.image}
-                sx={{
-                  objectFit: 'cover',
-                }}
-              />
-              {/* Project Content */}
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 'bold',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  {project.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    marginBottom: '1rem',
-                    color: '#666',
-                  }}
-                >
-                  {project.description}
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    textTransform: 'none',
-                  }}
-                >
-                  View Project
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
+              {project.title}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                marginBottom: '1rem',
+                color: '#666',
+              }}
+            >
+              {project.description}
+            </Typography>
+            <Button
+              variant="contained"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textTransform: 'none',
+                backgroundColor: '#8e44ad',
+                '&:hover': {
+                  backgroundColor: '#6d3590',
+                },
+              }}
+            >
+              View Project
+            </Button>
+          </CardContent>
+        </Card>
       </Grid>
-    </Box>
-  );
+    ))}
+  </Grid>
+</Box>
+);
 }

@@ -92,7 +92,7 @@ export default function About() {
         <Button
           variant="contained"
           color="primary"
-          href="#contact"
+          href="mailto:bibihajira068@gmail.com"
           sx={{
             backgroundColor: '#8e44ad', // Theme color
             '&:hover': { backgroundColor: '#6d3590' },

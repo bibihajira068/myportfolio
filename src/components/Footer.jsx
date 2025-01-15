@@ -5,27 +5,34 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 
-
-
 export default function Footer() {
   return (
     <Box
       id="Footer"
       sx={{
-        height: '10vh', // Full viewport height
-        padding: '1rem',
+        padding: { xs: '1rem 1rem', sm: '1.5rem 2rem' },
         background: '#3E2723',
         display: 'flex',
-        justifyContent: 'space-between',
+        flexDirection: { xs: 'column', sm: 'row' },
         alignItems: 'center',
+        justifyContent: { xs: 'center', sm: 'space-between' },
         color: 'white',
+        textAlign: 'center',
+        gap: { xs: '1rem', sm: '0' }, // Adjust gap for smaller screens
       }}
     >
       {/* Left Section */}
-      <Typography>© Made with ♥ by Hajira</Typography>
+      <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
+        © Made with ♥ by Hajira
+      </Typography>
 
       {/* Right Section: Social Media Buttons */}
-      <Box sx={{ display: 'flex', gap: '1rem' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: '1rem',
+        }}
+      >
         <IconButton
           aria-label="LinkedIn"
           component="a"

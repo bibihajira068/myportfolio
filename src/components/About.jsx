@@ -6,30 +6,32 @@ export default function About() {
     <Box
       id="about"
       sx={{
-        height: '100vh', // Full viewport height
+        minHeight: '100vh', // Full viewport height
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
+        flexDirection: { xs: 'column', md: 'row' }, // Column for small screens, row for larger screens
         alignItems: 'center',
-        justifyContent: 'center',
-        padding: '2rem',
-        backgroundColor: '#f7f3e9', // Background for mocha mousse theme
-        gap: '2rem',
+        justifyContent: 'space-between',
+        padding: { xs: '2rem', md: '4rem' },
+        backgroundColor: '#f7f3e9', // Mocha mousse theme background
+        gap: { xs: '2rem', md: '4rem' },
       }}
     >
       {/* Profile Image Section */}
       <Box
         sx={{
-          flex: 1,
+          flex: { xs: '0 0 auto', md: '0 0 auto' },
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          width: { xs: '200px', sm: '250px', md: '300px' },
+          height: { xs: '200px', sm: '250px', md: '300px' },
         }}
       >
         <Box
           sx={{
-            width: 250,
-            height: 250,
-            borderRadius: '50%',
+            width: '100%',
+            height: '100%',
+            borderRadius: '50%', // Ensures the image is round
             backgroundImage: 'url(/icon.png)', // Replace with your image path
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -43,15 +45,23 @@ export default function About() {
         sx={{
           flex: 2,
           textAlign: { xs: 'center', md: 'left' },
+          maxWidth: { md: '60%' },
         }}
       >
-        <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+        <Typography
+          variant="h3"
+          gutterBottom
+          sx={{
+            fontWeight: 'bold',
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+          }}
+        >
           Who I Am
         </Typography>
         <Typography
           sx={{
             marginBottom: '2rem',
-            fontSize: '1.2rem',
+            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
             lineHeight: 1.6,
             color: '#555',
           }}
@@ -67,9 +77,16 @@ export default function About() {
           constantly exploring new opportunities to grow and innovate.
         </Typography>
 
-        {/* Buttons
-        <Box sx={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button
+        {/* Action Buttons */}
+        <Box
+          sx={{
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            justifyContent: { xs: 'center', md: 'flex-start' },
+          }}
+        >
+          {/* <Button
             variant="contained"
             color="primary"
             href="#contact"
@@ -96,8 +113,8 @@ export default function About() {
             }}
           >
             Download CV
-          </Button>
-        </Box> */}
+          </Button> */}
+        </Box>
       </Box>
     </Box>
   );
